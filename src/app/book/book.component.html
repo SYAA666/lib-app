@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{bookInfo.name}}</h5>
+    <p class="card-text">Автор: {{bookInfo.author}}
+    </p>
+    <p class="card-text">Год: {{bookInfo.year}}
+    </p>
+    <p class="card-text">Цена: {{bookInfo.cost}}
+    </p>
+    <a (click)="addToCart()" class="btn btn-primary">В корзину</a>
+  </div>
+</div>
