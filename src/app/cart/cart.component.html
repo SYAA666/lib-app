@@ -1,3 +1,22 @@
-<p>
-  cart works!
-</p>
+<div class="container jumbotron">
+  <div class="row">
+    <div class="col-4">
+      <h4>Общая цена:</h4>
+    </div>
+    <div class="col-12">
+      <button (click)="deleteAllBooks()" type="button" class="btn btn-primary">Купить</button>
+      <button (click)="deleteAllBooks()" type="button" class="btn btn-primary">Удалить всё</button>
+    </div>
+  </div>
+  <div *ngFor="let book of cart" class="alert alert-primary row">
+    <div class="col-2">
+      Name: {{book.name}}
+    </div>
+    <div class="col-4">
+      Cost: {{book.cost}}
+    </div>
+    <div class="col-6">
+      <button (click)="deleteBook(book)" type="button" class="btn btn-danger">Удалить</button>
+    </div>
+  </div>
+</div>

@@ -13,7 +13,6 @@ export class CatalogComponent implements OnInit {
 
   ngOnInit() {
     this.books = Books;
-    console.log(this.books)
   }
 
 }
