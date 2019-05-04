@@ -17,16 +17,26 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     this.cart = this.shop.getCart();
+    this.findSum();
   }
 
   public deleteBook(book: Book): void {
     this.shop.deleteBook(book);
     this.cart = this.shop.getCart();
+    this.findSum();
   }
 
   public deleteAllBooks(): void {
     this.cart.length = 0;
     this.shop.deleteAll();
+    this.findSum();
+  }
+
+  public findSum() {
+    this.totalCost = 0; 
+    this.cart.forEach((book: Book) => {
+      this.totalCost += book.cost;
+    })
   }
 
 }
